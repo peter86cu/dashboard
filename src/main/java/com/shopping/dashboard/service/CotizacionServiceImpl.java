@@ -5,38 +5,26 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 
-import com.ayalait.modelo.Cliente;
-import com.ayalait.modelo.Producto;
-import com.ayalait.modelo.Session;
-import com.ayalait.utils.ResponsePrefactura;
-import com.ayalait.web.VisitantesLog;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.google.gson.Gson;
-import com.multishop.modelo.Prefactura;
-import com.multishop.modelo.PrefacturaDetalle;
 import com.shopping.dashboard.repositorio.VisitantesJPA;
 import com.shopping.dashboard.vo.ErrorState;
+import com.shopping.dashboard.vo.VisitantesLog;
 
 @Service
 public class CotizacionServiceImpl implements CotizacionService {
